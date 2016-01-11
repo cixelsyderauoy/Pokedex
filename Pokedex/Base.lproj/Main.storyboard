@@ -88,7 +88,7 @@
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="99T-RK-vGJ">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="99T-RK-vGJ">
                                                     <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59926307624113473" colorSpace="calibratedRGB"/>
                                                 </imageView>
@@ -182,6 +182,9 @@
                                             <constraint firstAttribute="height" constant="39" id="kUT-be-NDC"/>
                                         </constraints>
                                         <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="backBtnPressed:" destination="5WA-S5-oOb" eventType="touchUpInside" id="ZaA-Gw-eXE"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -202,14 +205,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="fYk-lx-YTg">
                                 <rect key="frame" x="20" y="492" width="560" height="100"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3uG-Jx-c5u">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3uG-Jx-c5u">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="GAf-IN-Cb1"/>
                                             <constraint firstAttribute="width" constant="100" id="ZRH-ue-uuh"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hay-Hy-Eeo">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hay-Hy-Eeo">
                                         <rect key="frame" x="280" y="0.0" width="280" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="Fw4-rl-O6z"/>
@@ -257,7 +260,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jcP-aU-IKM">
                                         <rect key="frame" x="0.0" y="33" width="560" height="215"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QNO-Hv-46E">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QNO-Hv-46E">
                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="215"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="120" id="0ux-ui-yuB"/>
@@ -449,10 +452,27 @@
                             <constraint firstItem="fYk-lx-YTg" firstAttribute="top" secondItem="QNA-aj-SFN" secondAttribute="bottom" constant="8" id="knV-Ta-xrB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="abilitiesLbl" destination="t7H-9M-3li" id="v28-HR-7nO"/>
+                        <outlet property="attackLbl" destination="fO0-Qu-tWs" id="LMp-JC-dRG"/>
+                        <outlet property="currentEvoImg" destination="3uG-Jx-c5u" id="Axh-pV-rLo"/>
+                        <outlet property="defenseLbl" destination="qVL-TR-mbh" id="5NE-Ru-peH"/>
+                        <outlet property="descriptionLbl" destination="DtZ-cC-S3Y" id="dZ2-fB-d77"/>
+                        <outlet property="heightLbl" destination="j1T-nn-kwX" id="d67-Iz-wde"/>
+                        <outlet property="hpLbl" destination="zUV-bt-qFf" id="YdM-Rc-cfc"/>
+                        <outlet property="mainImg" destination="QNO-Hv-46E" id="tJn-BZ-HvJ"/>
+                        <outlet property="nameAndNumbLbl" destination="hlD-Ay-D4Z" id="lzn-hL-Ajr"/>
+                        <outlet property="nextEvoImg" destination="Hay-Hy-Eeo" id="uYB-ww-kBB"/>
+                        <outlet property="spAtkLbl" destination="JYD-jl-kT5" id="Dzs-h3-lgH"/>
+                        <outlet property="spDefLbl" destination="jZz-Mh-IO4" id="e81-3B-LiT"/>
+                        <outlet property="speedLbl" destination="nsP-4u-kZN" id="hmx-MQ-DF6"/>
+                        <outlet property="typeLbl" destination="Zm8-Xd-QQ1" id="8Qs-K0-c2q"/>
+                        <outlet property="weightLbl" destination="7X7-zc-tMi" id="xW8-Gs-c3T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fDb-1s-ImG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="872" y="526"/>
+            <point key="canvasLocation" x="784" y="631"/>
         </scene>
     </scenes>
     <resources>
